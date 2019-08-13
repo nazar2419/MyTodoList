@@ -1,20 +1,20 @@
 <template>
 	<li>
-		<span :class="{check:todo.completed}">
-			<input type="checkbox"
-			v-on:change="todo.completed = !todo.completed">	
-			<strong>{{index +1}}</strong>
+		<span :class = "{ check: todo.completed }">
+			<input type = "checkbox"
+			v-on:change = "todo.completed = !todo.completed">	
+			<strong>{{index + 1}}</strong>
 			{{todo.title | upperCase()}}
 		</span> 
-		<button @click="$emit('remove-todo',todo.id)">Delete</button>
+		<button @click="$emit('remove-todo', todo.id)">Delete</button>
 	</li>
 </template>
 <script>
 	export default{
-		props: {
+		props:{
 			todo:{
-				type:Object,
-				required:false
+				type: Object,
+				required: false
 			},
 			index:Number
 		},
@@ -27,7 +27,6 @@
 </script>
 
 <style scoped>
-
 	li {
 		border: 1px solid #ccc;
 		display: flex;
@@ -37,7 +36,6 @@
 	}
 	input {
 		margin-right: 1rem;
-
 	}
 	.check{
 		text-decoration:line-through;

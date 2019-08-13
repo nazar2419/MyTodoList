@@ -1,13 +1,13 @@
 <template>
 	<div>
-		<add-list @add-todo="addList"/>
+		<add-list @add-todo = "addList"/>
 		<ul>
 			<item-list
-				v-for="(todo, i) of todos"
-				:todo="todo"
-				:index="i"
-				v-on:remove-todo="removeTodo"
-				/>
+				v-for = "(todo, i) of todos"
+				:key = "todo.id"
+				:todo = "todo"
+				:index = "i"
+				v-on:remove-todo = "removeTodo"/>
 		</ul>
 	</div>
 </template>
@@ -23,21 +23,20 @@
 			{id:1, title: 'Купити молоко', completed:false},
 			{id:2, title: 'Купити сир', completed:false},
 			{id:3, title: 'Купити м\'ясо', completed:false}
-			]
-		}
+			]}
 		},
-		methods: {
+
+		methods:{
 			addList(todo){
 				this.todos.push(todo);
-
 			},
 			removeTodo(id){
-				this.todos = this.todos.filter(t => t.id !==id)
+				this.todos = this.todos.filter(t => t.id !== id)
 			}
 		},
-		components: {
-    	AddList,ItemList
-  		}
+		components:{
+			AddList,ItemList 
+		}
 	}
 </script>
 

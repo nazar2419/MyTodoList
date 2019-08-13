@@ -1,31 +1,31 @@
 <template>
-	<form @submit.prevent="onSubmit" class="form">
-		<input type="text" v-model="title" class="title">
-		<button class="submit">Add</button>
+	<form @submit.prevent = "onSubmit" class = "form">
+		<input type = "text" v-model = "title" class = "title">
+		<button class = "submit">Add</button>
 	</form>
 </template>
 
 <script>
 	export default {
-	data(){
-		return {
-			title:''
-		}
-	},
-	methods:{
-		onSubmit(){
-			if (this.title.trim()) {
-				const newTodo = {
-				id:Math.floor(Math.random() * 10000000),
-				title:this.title,
-				completed:false
+		data(){
+			return {
+				title:''
 			}
-			this.$emit('add-todo', newTodo)
-			this.title = ''
+		},
+		methods:{
+			onSubmit(){
+				if (this.title.trim()) {
+					const newTodo = {
+					id:Math.floor( Math.random() * 10000000 ),
+					title:this.title,
+					completed:false
+					}
+				this.$emit('add-todo', newTodo)
+				this.title = ''
+				}
+			}
 		}
 	}
-	},
-}
 </script>
 <style scoped>
 	input {
