@@ -1,6 +1,6 @@
 <template>
 	<form @submit.prevent = "onSubmit"  class = "form">
-		<input type = "text"  maxlength="25" v-model = "title"  class = "title">
+		<input type = "text"  maxlength="26" v-model = "title"  class = "title">
 		<button class = "submit">Add</button>
 	</form>
 </template>
