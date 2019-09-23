@@ -18,10 +18,18 @@ export default {
 </script>
 
 <style>
+@import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css');
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  color: #2c3e50;
-  text-align: center;
-  margin-top: 60px;
+  /*text-align: center;*/
+  margin:60px auto;
+  padding:2rem 3rem 3rem;
+  max-width:500px;
+  background:#006666;
+  color:#FFF;
+
 }
+
+ 
 </style>
